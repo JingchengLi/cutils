@@ -7,8 +7,11 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include <time.h>
 
-char* replace_str (const char *strbuf, const char *strold, const char *strnew);
+int isStartWith(const char *buf, const char *match, int sensitive);
+int isEndWith(const char* buf, const char* match, int sensitive);
+char* replaceStr (const char *strbuf, const char *strold, const char *strnew);
 
 #endif
