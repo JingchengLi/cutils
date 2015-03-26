@@ -84,7 +84,7 @@ void init_min_heap(btree* tree) {
     heapify(tree, 1, 0); // index begin with 1
 }
 
-#if MAIN
+#ifdef MAIN
 void main() {
     btree_node array[16] = {16, 1, 3, 5, 7 , 11, 15, 14, 13, 4, 12, 6, 8, 9, 2, 10};
     btree tree;
