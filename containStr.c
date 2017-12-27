@@ -22,11 +22,12 @@ int containStr(const char* src, const char* substring) {
             } else if ('\0' == *p) {
                 return 0;
             } else if (*p != *q) {
+		q = substring;
                 if (pos) {
-                    q = substring;
                     p = pos;
+                    pos = NULL;			
                 } else
-                    break;
+		    break;
             }
         }
         p++;
@@ -36,6 +37,10 @@ int containStr(const char* src, const char* substring) {
 }
 
 int main() {
+    assert(1 == containStr("sxxxstr", "str"));
+    printf("xx=================================");
+    assert(1 == containStr("sxxxstsxstr", "str"));
+    assert(1 == containStr("sxxxsstr", "str"));
     assert(1 == containStr("sssssstr", "str"));
     assert(1 == containStr("ssstrsss", "strsss"));
     assert(1 == containStr("ssstrsss", "str"));
