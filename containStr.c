@@ -22,12 +22,12 @@ int containStr(const char* src, const char* substring) {
             } else if ('\0' == *p) {
                 return 0;
             } else if (*p != *q) {
-		q = substring;
+                q = substring;
                 if (pos) {
                     p = pos;
                     pos = NULL;			
                 } else
-		    break;
+                    break;
             }
         }
         p++;
